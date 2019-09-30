@@ -1,0 +1,24 @@
+Algorithm for Program
+Send HIGH pulse for 10 micro seconds on TRIG pin
+Initially P3.1 = 0;
+
+P3.1 = 1;
+
+delay_ms (10);
+
+P3.1 = 0;
+
+Wait until the module transmits 40 KHz pulses. When 8thpulse is transmitted echo pin becomes HIGH, TIMER0 starts counting, when input INT0 goes LOW and timer counts the time
+while (INT0 == 0);
+
+while (INT0 == 1);
+
+TIMER0 value is equal to the time taken by the signal to go forward and comeback so we need to take only half time.
+Time required = TIMER0 VALUE/2
+
+The speed of the ultrasonic pulse is nothing but the speed of sound which is 340.29 m/s or 34029 cm/s
+Distance = speed * time = 34029 * (TIMER0) / 2
+At 11.0592 MHz, TIMER0 gets incremented for 1µs.
+Range = 17015 * TIMER0 X 10-6
+
+Target range = TIMER0/58 cm.

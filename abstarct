@@ -1,0 +1,4 @@
+in this project, we have built an Ultrasonic Rangefinder using 8051 Microcontroller and Ultrasonic Sensor.
+We have different ways to measure the distance. One way is to use Ultra Sonic Sensor or Module for distance measurement. 
+This article explains you how to measure the distance using 8051 microcontroller. 
+This Ultrasonic Range Finder system measures the distance up to 4 meters with an accuracy of 3 mm.
